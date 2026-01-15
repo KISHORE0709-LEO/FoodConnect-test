@@ -52,6 +52,7 @@ export default {
           teal: "hsl(var(--food-teal))",
           emerald: "hsl(var(--food-emerald))",
           cyan: "hsl(var(--food-cyan))",
+          yellow: "hsl(var(--food-yellow))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
