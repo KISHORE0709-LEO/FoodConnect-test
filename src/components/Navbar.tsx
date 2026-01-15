@@ -94,10 +94,12 @@ const Navbar = () => {
           </nav>
 
           {/* Profile */}
-          <button className="flex items-center gap-2 text-gray-700 hover:text-teal-600 transition-colors">
-            <User className="w-5 h-5" />
-            <span className="hidden sm:inline text-[13px] font-semibold">PROFILE</span>
-          </button>
+          <Link to="/login">
+            <button className="flex items-center gap-2 text-gray-700 hover:text-teal-600 transition-colors">
+              <User className="w-5 h-5" />
+              <span className="hidden sm:inline text-[13px] font-semibold">LOGIN</span>
+            </button>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,24 +1,18 @@
-import { useAuth } from '@/context/AuthContext';
-import { useLocation } from 'wouter';
-import { useEffect } from 'react';
+import { ReactNode } from 'react';
+import { Navigate } from 'react-router-dom';
 
 interface ProtectedRouteProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export function ProtectedRoute({ children }: ProtectedRouteProps) {
-  const { isAuthenticated } = useAuth();
-  const [, setLocation] = useLocation();
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      setLocation('/auth');
-    }
-  }, [isAuthenticated, setLocation]);
-
+export default function ProtectedRoute({ children }: ProtectedRouteProps) {
+  // For demo purposes, always redirect to login
+  // In real app, check authentication status here
+  const isAuthenticated = false; // Replace with actual auth check
+  
   if (!isAuthenticated) {
-    return null;
+    return <Navigate to="/login" replace />;
   }
-
+  
   return <>{children}</>;
 }
