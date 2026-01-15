@@ -16,7 +16,7 @@ const AnalysisTypeSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Generic Analysis Card */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-shadow">
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:border-teal-500 transition-all">
             <div className="w-16 h-16 rounded-2xl bg-green-600 flex items-center justify-center mx-auto mb-6">
               <Search className="w-8 h-8 text-white" />
             </div>
@@ -54,7 +54,7 @@ const AnalysisTypeSection = () => {
           </div>
 
           {/* Customized Analysis Card */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-shadow">
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:border-teal-500 transition-all">
             <div className="w-16 h-16 rounded-2xl bg-blue-500 flex items-center justify-center mx-auto mb-6">
               <UserPlus className="w-8 h-8 text-white" />
             </div>
