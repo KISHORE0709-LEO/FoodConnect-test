@@ -22,7 +22,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-9 h-9 rounded-lg gradient-hero flex items-center justify-center">
-              <Leaf className="w-5 h-5 text-primary-foreground" />
+              <Leaf className="w-5 h-5 text-white" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg text-foreground leading-tight">FoodConnect</span>
@@ -94,7 +94,7 @@ const Navbar = () => {
           </nav>
 
           {/* Profile */}
-          <button className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+          <button className="flex items-center gap-2 text-foreground hover:text-food-teal transition-colors">
             <User className="w-5 h-5" />
             <span className="hidden sm:inline text-sm font-medium">PROFILE</span>
           </button>
