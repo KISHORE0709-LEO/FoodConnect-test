@@ -16,23 +16,23 @@ const Navbar = () => {
   const isAnalysisActive = location.pathname.includes("/generic") || location.pathname.includes("/customized");
 
   return (
-    <header className="w-full bg-background border-b border-border sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+    <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg gradient-hero flex items-center justify-center">
+          <Link to="/" className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-teal-600 to-teal-500 flex items-center justify-center">
               <Leaf className="w-5 h-5 text-white" />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground leading-tight">FoodConnect</span>
-              <span className="text-xs text-muted-foreground leading-tight">Know What You Eat</span>
+              <span className="font-bold text-[17px] text-gray-900 leading-tight">FoodConnect</span>
+              <span className="text-[11px] text-gray-600 leading-tight">Know What You Eat</span>
             </div>
           </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center">
-            <div className="flex items-center bg-muted/50 rounded-full p-1 border border-border">
+            <div className="flex items-center bg-gray-50 rounded-full p-1 gap-0.5">
               <Link
                 to="/"
                 className={`nav-pill ${isActive("/") ? "nav-pill-active" : "nav-pill-inactive"}`}
@@ -94,9 +94,9 @@ const Navbar = () => {
           </nav>
 
           {/* Profile */}
-          <button className="flex items-center gap-2 text-foreground hover:text-food-teal transition-colors">
+          <button className="flex items-center gap-2 text-gray-700 hover:text-teal-600 transition-colors">
             <User className="w-5 h-5" />
-            <span className="hidden sm:inline text-sm font-medium">PROFILE</span>
+            <span className="hidden sm:inline text-[13px] font-semibold">PROFILE</span>
           </button>
         </div>
       </div>

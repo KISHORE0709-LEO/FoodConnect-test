@@ -3,50 +3,50 @@ import { Search, UserPlus, Check, ArrowRight } from "lucide-react";
 
 const AnalysisTypeSection = () => {
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-3">
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-3">
             Choose Your Analysis Type
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-gray-600 text-lg">
             Two powerful ways to understand your food products
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Generic Analysis Card */}
-          <div className="feature-card flex flex-col">
-            <div className="icon-circle icon-circle-teal">
-              <Search className="w-6 h-6" />
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 rounded-2xl bg-green-600 flex items-center justify-center mx-auto mb-6">
+              <Search className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-foreground text-center mb-3">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
               Generic Analysis
             </h3>
-            <p className="text-muted-foreground text-center text-sm mb-6 leading-relaxed">
+            <p className="text-gray-600 text-center text-[15px] mb-8 leading-relaxed px-2">
               Perfect for everyone! Upload any food product image and get
               instant ingredient breakdown, toxicity analysis, sugar/salt levels,
               and FSSAI verification. No registration required.
             </p>
 
-            <div className="space-y-3 mb-6 flex-grow">
-              <div className="flex items-center gap-3 text-sm border-b border-border pb-3">
-                <Check className="w-4 h-4 text-food-teal flex-shrink-0" />
-                <span className="text-food-teal font-medium">Ingredient breakdown</span>
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3 text-[15px]">
+                <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <span className="text-green-600 font-medium">Ingredient breakdown</span>
               </div>
-              <div className="flex items-center gap-3 text-sm border-b border-border pb-3">
-                <Check className="w-4 h-4 text-food-teal flex-shrink-0" />
-                <span className="text-food-teal font-medium">Safety scoring system</span>
+              <div className="flex items-center gap-3 text-[15px]">
+                <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <span className="text-green-600 font-medium">Safety scoring system</span>
               </div>
-              <div className="flex items-center gap-3 text-sm">
-                <Check className="w-4 h-4 text-food-teal flex-shrink-0" />
-                <span className="text-food-teal font-medium">FSSAI verification</span>
+              <div className="flex items-center gap-3 text-[15px]">
+                <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <span className="text-green-600 font-medium">FSSAI verification</span>
               </div>
             </div>
 
             <Link
               to="/generic"
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-lg btn-teal mt-auto"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-green-600 text-white font-semibold text-[15px] hover:bg-green-700 transition-colors"
             >
               Try Generic Analysis
               <ArrowRight className="w-4 h-4" />
@@ -54,37 +54,37 @@ const AnalysisTypeSection = () => {
           </div>
 
           {/* Customized Analysis Card */}
-          <div className="feature-card flex flex-col">
-            <div className="icon-circle icon-circle-blue">
-              <UserPlus className="w-6 h-6" />
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 rounded-2xl bg-blue-500 flex items-center justify-center mx-auto mb-6">
+              <UserPlus className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-foreground text-center mb-3">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
               Customized Analysis
             </h3>
-            <p className="text-muted-foreground text-center text-sm mb-6 leading-relaxed">
+            <p className="text-gray-600 text-center text-[15px] mb-8 leading-relaxed px-2">
               Personalized for you! Set your allergies, health conditions, and
               dietary preferences. Get instant alerts when products contain
               ingredients that could harm you.
             </p>
 
-            <div className="space-y-3 mb-6 flex-grow">
-              <div className="flex items-center gap-3 text-sm border-b border-border pb-3">
-                <Check className="w-4 h-4 text-food-blue flex-shrink-0" />
-                <span className="text-food-blue font-medium">Personalized allergen warnings</span>
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3 text-[15px]">
+                <Check className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <span className="text-blue-500 font-medium">Personalized allergen warnings</span>
               </div>
-              <div className="flex items-center gap-3 text-sm border-b border-border pb-3">
-                <Check className="w-4 h-4 text-food-blue flex-shrink-0" />
-                <span className="text-food-blue font-medium">Health condition alerts</span>
+              <div className="flex items-center gap-3 text-[15px]">
+                <Check className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <span className="text-blue-500 font-medium">Health condition alerts</span>
               </div>
-              <div className="flex items-center gap-3 text-sm">
-                <Check className="w-4 h-4 text-food-blue flex-shrink-0" />
-                <span className="text-food-blue font-medium">Custom dietary tracking</span>
+              <div className="flex items-center gap-3 text-[15px]">
+                <Check className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <span className="text-blue-500 font-medium">Custom dietary tracking</span>
               </div>
             </div>
 
             <Link
               to="/customized"
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-lg btn-blue mt-auto"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-blue-500 text-white font-semibold text-[15px] hover:bg-blue-600 transition-colors"
             >
               Start Personalized Scan
               <ArrowRight className="w-4 h-4" />
