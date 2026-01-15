@@ -1,0 +1,145 @@
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Github, Linkedin, Instagram, Twitter, Mail, MapPin, User } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
+export default function Contact() {
+  const creators = [
+    {
+      name: 'M KISHORE',
+      role: 'Full Stack Developer & ML Engineer',
+      avatarColor: 'from-green-600 to-teal-500',
+      bio: 'Passionate about AI/ML and building innovative solutions for real-world problems.',
+      links: {
+        github: 'https://github.com/KISHORE0709-LEO',
+        linkedin: 'https://www.linkedin.com/in/m-kishore-417b8b193/',
+        instagram: 'https://www.instagram.com/kishore_demur/',
+        twitter: 'https://x.com/kishore_0709',
+        email: 'kishoremurali0726@gmail.com'
+      }
+    },
+    {
+      name: 'CH V SNEHA',
+      role: 'Frontend Developer & UI/UX Designer',
+      avatarColor: 'from-teal-500 to-blue-500',
+      bio: 'Creative developer focused on user experience and modern web technologies.',
+      links: {
+        github: 'https://github.com/chv-sneha',
+        linkedin: 'https://www.linkedin.com/in/ch-v-sneha-6ba7792a0/',
+        instagram: 'https://www.instagram.com/chv_sneha',
+        twitter: 'https://x.com/chvsneha2310',
+        email: 'chvsneha2310@gmail.com'
+      }
+    }
+  ];
+
+  const SocialLink = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center space-x-2 text-gray-600 hover:text-teal-600 transition-colors"
+      title={label}
+    >
+      {icon}
+      <span className="text-sm">{label}</span>
+    </a>
+  );
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      <main className="flex-1 pt-20 pb-12 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Contact Us
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Meet the team behind FoodConnect. We're passionate about creating innovative solutions 
+              that make food safety accessible to everyone.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {creators.map((creator, index) => (
+              <Card key={index} className="border-2 border-gray-200 hover:border-teal-400 hover:shadow-2xl transition-all">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-6">
+                    <div className={`w-32 h-32 rounded-full bg-gradient-to-br ${creator.avatarColor} flex items-center justify-center border-4 border-gray-100 shadow-lg`}>
+                      <User className="text-white" size={48} />
+                    </div>
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900">
+                    {creator.name}
+                  </CardTitle>
+                  <p className="text-teal-600 font-semibold">{creator.role}</p>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <p className="text-gray-600 text-center">{creator.bio}</p>
+                  
+                  <div className="space-y-3">
+                    <SocialLink
+                      href={creator.links.email}
+                      icon={<Mail size={18} />}
+                      label="Email"
+                    />
+                    <SocialLink
+                      href={creator.links.github}
+                      icon={<Github size={18} />}
+                      label="GitHub"
+                    />
+                    <SocialLink
+                      href={creator.links.linkedin}
+                      icon={<Linkedin size={18} />}
+                      label="LinkedIn"
+                    />
+                    <SocialLink
+                      href={creator.links.instagram}
+                      icon={<Instagram size={18} />}
+                      label="Instagram"
+                    />
+                    <SocialLink
+                      href={creator.links.twitter}
+                      icon={<Twitter size={18} />}
+                      label="Twitter"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <Card className="mb-12 bg-gradient-to-r from-green-50 via-teal-50 to-blue-50 border-2">
+            <CardHeader>
+              <CardTitle className="text-2xl text-center">About This Project</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center space-y-4">
+              <p className="text-gray-700 text-lg">
+                FoodConnect is a comprehensive machine learning research project focused on intelligent food safety assessment. 
+                This platform combines cutting-edge AI technologies to provide personalized health insights and safety ratings.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">6 Months</div>
+                  <div className="text-gray-600">Development Time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-teal-600 mb-2">5+</div>
+                  <div className="text-gray-600">ML Algorithms</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">18K+</div>
+                  <div className="text-gray-600">Food Database Items</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+}
