@@ -46,7 +46,7 @@ const FeaturesSection = () => {
             const isTeal = feature.variant === "teal";
 
             return (
-              <div key={index} className="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-xl hover:border-teal-500 transition-all">
+              <div key={index} className="bg-white rounded-2xl border-2 border-gray-200 p-8 text-center hover:shadow-2xl hover:border-teal-400 transition-all">
                 <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 ${
                   isTeal ? "bg-gradient-to-br from-green-600 to-teal-500" : "bg-gradient-to-br from-green-500 to-blue-500"
                 }`}>

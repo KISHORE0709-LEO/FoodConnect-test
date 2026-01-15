@@ -16,7 +16,7 @@ const AnalysisTypeSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Generic Analysis Card */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:border-teal-500 transition-all">
+          <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:shadow-2xl hover:border-teal-400 transition-all flex flex-col">
             <div className="w-16 h-16 rounded-2xl bg-green-600 flex items-center justify-center mx-auto mb-6">
               <Search className="w-8 h-8 text-white" />
             </div>
@@ -29,7 +29,7 @@ const AnalysisTypeSection = () => {
               and FSSAI verification. No registration required.
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 flex-grow">
               <div className="flex items-center gap-3 text-[15px]">
                 <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
                 <span className="text-green-600 font-medium">Ingredient breakdown</span>
@@ -46,7 +46,7 @@ const AnalysisTypeSection = () => {
 
             <Link
               to="/generic"
-              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-green-600 text-white font-semibold text-[15px] hover:bg-green-700 transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-green-600 text-white font-semibold text-[15px] hover:bg-green-700 transition-colors mt-auto"
             >
               Try Generic Analysis
               <ArrowRight className="w-4 h-4" />
@@ -54,7 +54,7 @@ const AnalysisTypeSection = () => {
           </div>
 
           {/* Customized Analysis Card */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:border-teal-500 transition-all">
+          <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:shadow-2xl hover:border-teal-400 transition-all flex flex-col">
             <div className="w-16 h-16 rounded-2xl bg-blue-500 flex items-center justify-center mx-auto mb-6">
               <UserPlus className="w-8 h-8 text-white" />
             </div>
@@ -67,7 +67,7 @@ const AnalysisTypeSection = () => {
               ingredients that could harm you.
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 flex-grow">
               <div className="flex items-center gap-3 text-[15px]">
                 <Check className="w-5 h-5 text-blue-500 flex-shrink-0" />
                 <span className="text-blue-500 font-medium">Personalized allergen warnings</span>
@@ -84,7 +84,7 @@ const AnalysisTypeSection = () => {
 
             <Link
               to="/customized"
-              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-blue-500 text-white font-semibold text-[15px] hover:bg-blue-600 transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-blue-500 text-white font-semibold text-[15px] hover:bg-blue-600 transition-colors mt-auto"
             >
               Start Personalized Scan
               <ArrowRight className="w-4 h-4" />
