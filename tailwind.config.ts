@@ -50,7 +50,7 @@ export default {
         food: {
           green: "hsl(var(--food-green))",
           teal: "hsl(var(--food-teal))",
-          emerald: "hsl(var(--food-emerald))",
+          blue: "hsl(var(--food-blue))",
           cyan: "hsl(var(--food-cyan))",
           yellow: "hsl(var(--food-yellow))",
         },
