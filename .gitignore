@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+__pycache__
+FastAPI_Backend/test.py
+FastAPI_Backend/keys.py
+FastAPI_Backend/data.py
+test.py
+test.ipynb
